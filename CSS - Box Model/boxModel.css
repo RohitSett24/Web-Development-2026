@@ -1,0 +1,56 @@
+.stretch-button {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: padding 1s;
+}
+
+.stretch-button:hover {
+    padding: 15px 30px;
+}
+
+.shadow-button {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.shadow-button:active {
+    margin-left: 2px;
+    margin-top: 2px;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
+}
+
+.one-button, .two-button, .three-button {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 6px 12px; 
+    font-size: 16px;
+    margin: 0px 6px;
+    transition: padding 0.15s, margin 0.15s;
+    cursor: pointer;
+}
+
+.one-button:hover, .two-button:hover, .three-button:hover {
+    padding-left: 18px;
+    padding-right: 18px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.back-button, .next-button {
+    padding: 8px 6px;
+    margin: 0px 10px;
+}
+
+a {
+    margin: 5px;
+}
+

@@ -1,0 +1,199 @@
+.sub-button {
+    background-color: rgb(204, 0, 0);
+    color: white; 
+    border: none;
+    /* height: 36px;
+    width: 110px; */
+    border-radius: 2px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: opacity 0.15s;
+    /* padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px; */
+    padding: 10px 15px;
+    vertical-align: top;
+}
+
+.sub-button:hover {
+    opacity: 0.8;
+}
+
+.sub-button:active {
+    opacity: 0.5;
+}
+
+.join-button {
+    background-color: white;
+    color: rgb(6, 95, 212);
+    border-color: rgb(6, 95, 212);
+    border-style: solid;
+    border-width: 1px;
+    /* height: 36px;
+    width: 60px; */
+    border-radius: 2px; 
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.15s, color 0.15s;
+    padding: 9px 15px;
+
+}
+
+.join-button:hover {
+    background-color: rgb(41, 107, 220);
+    color: white;
+}
+
+.join-button:active {
+    opacity: 0.7;
+}
+
+.tweet-button {
+    background-color: rgb(29, 155, 240);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    /* height: 36px;
+    width: 74px; */
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer; 
+    transition: box-shadow 0.15s;
+    padding: 9px 17px;
+}
+
+.tweet-button:hover {
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.15);
+}
+
+.tweet-button:active {
+    opacity: 0.6;
+}
+
+.uber-button {
+    background-color: black;
+    color: white;
+    border: none;
+    /* height: 40px;
+    width: 124px; */
+    cursor: pointer;
+    transition: opacity 0.15s;
+    padding: 10px 18px;
+}
+
+.uber-button:hover {
+    opacity: 0.8;
+}
+
+.amazon-button {
+    background-color: rgb(255, 216, 20);
+    /* height: 33px;
+    width: 180px; */
+    border: none;
+    border-radius: 18px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.15s;
+    padding: 8px 50px;
+}
+
+.amazon-button:hover {
+    background-color: rgb(255, 204, 0);
+}
+
+.github-button {
+    background-color: rgb(46, 164, 79);
+    color: white;
+    /* height: 36px;
+    width: 95px; */
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: box-shadow 0.15s;
+    padding: 11px 22px;
+}
+
+.github-button:hover {
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.15); 
+}
+
+.bootstrap-button1 {
+    color: white;
+    background-color: rgb(121, 82, 179);
+    border: none;
+    /* height: 38px;
+    width: 110px; */
+    border-radius: 3px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.15s;
+    padding: 12px 22px;
+}
+
+.bootstrap-button1:hover {
+    background-color: rgb(104, 55, 177);
+}
+
+.bootstrap-button2 {
+    background-color: white;
+    color: rgb(108, 117, 125);
+    border: 1px solid rgb(108, 117, 125);
+    /* height: 38px;
+    width: 110px; */
+    border-radius: 3px;
+    font-weight: bold;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: background-color 0.15s, color 0.15s;
+    padding: 12px 22px;
+}
+
+.bootstrap-button2:hover {
+    color: white;
+    background-color: rgb(108, 117, 125);
+}
+
+.linkedin-button1 {
+    color: white;
+    background-color: rgb(10, 102, 194);
+    border: none;
+    /* height: 36px;
+    width: 240px; */
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 15px;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: background-color 0.15s;
+    padding: 11px 22px;
+    vertical-align: top;
+}
+
+.linkedin-button1:hover {
+    background-color: rgb(8, 70, 132); 
+}
+
+.linkedin-button2 {
+    color: rgb(10, 102, 194);
+    background-color: white;
+    border: 1px solid rgb(10, 102, 194);
+    /* height: 36px;
+    width: 80px; */
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.15s, box shadow 0.15s;
+    padding: 10px 21px;
+    vertical-align: top;
+}
+
+.linkedin-button2:hover {
+    background-color: rgba(7, 125, 244, 0.15);
+    /* border-width: 2px; */
+    /* padding: 9px 20px; */
+    box-shadow: 0 0 0 1px rgb(10, 102, 194);
+}
