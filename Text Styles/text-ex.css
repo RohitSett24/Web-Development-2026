@@ -1,0 +1,212 @@
+/* Ex 5a. */
+
+.tahoma-text {
+  font-family: Tahoma;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Ex 5b. */
+
+.shopping-ad-line1, .shopping-ad-line2 {
+  font-family: Arial;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.shopping-ad-line1 {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.shopping-ad-line2 {
+  font-size: 17px;
+  color: rgb(227, 65, 64);
+  font-style: italic;
+}
+
+/* Ex 5c. */
+
+.course-ad-line1, .course-ad-line2, .course-ad-line3, .course-ad-button {
+  font-family: Verdana;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.course-ad-line1 {
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.course-ad-line2 {
+  color: grey;
+  font-size: 14px;
+  margin-bottom: 17px;
+}
+
+.course-ad-line3 {
+  font-size: 14px;
+  width: 250px;
+  line-height: 20px;
+  margin-bottom: 16px;
+}
+
+.course-ad-button {
+  background-color: rgb(1, 146, 1);
+  color: white;
+  border: none;
+  padding: 7px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.course-ad-button:hover {
+  opacity: 0.8;
+}
+
+.course-ad-button:active {
+  opacity: 0.5;
+}
+
+/* Ex 5d. */
+
+.apple-ad-line1, .apple-ad-line2, .apple-ad-line3 {
+  font-family: Arial;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.apple-ad-line1 {
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 14px;
+}
+
+.apple-ad-line2 {
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+
+.apple-ad-line3 {
+  color: rgb(57, 115, 197);
+  font-size: 14px;
+}
+
+.apple-ad-line3:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Ex 5e. */
+
+.mac-line1, .mac-line2, .mac-line3, .mac-line4, .mac-button {
+  font-family: Arial;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.mac-line1 {
+  color: rgb(227, 65, 64);
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.mac-line2 {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 0px;
+}
+
+.mac-line3 {
+  font-weight: bold;
+  font-size: 32px;
+  margin-bottom: 7px;
+}
+
+.mac-line4 {
+  font-size: 14px;
+  color: rgb(107, 106, 106);
+  margin-bottom: 10px;
+}
+
+.mac-button {
+  background-color: rgb(9, 111, 219);
+  color: white;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 15px;
+  margin-left: 690px;
+  cursor: pointer;
+}
+
+.mac-button:hover {
+  opacity: 0.8;
+}
+
+.mac-button:active {
+  opacity: 0.5;
+}
+
+/* Ex 5f. */
+
+.stock-line1, .stock-line2, .stock-line3 {
+  font-family: Arial;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.stock-price {
+  font-size: 30px;
+  margin-right: 7px;
+}
+
+.stock-currency {
+  color: grey;
+}
+
+.stock-line2 {
+  color: green;
+  margin-top: 5px;
+  margin-bottom: 7px;
+}
+
+.stock-future-price {
+  color: grey;
+}
+
+.stock-future-loss {
+  color: rgb(227, 65, 64);
+}
+
+/* Ex 5g. */
+
+.tweet-line1, .tweet-line2, .tweet-line3 {
+  font-family: Arial;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 17px;
+}
+
+.twitter-handle {
+  font-weight: bold;
+}
+
+.twitter-username {
+  color: grey;
+}
+
+.tweet-line2 {
+  width: 550px;
+  margin-top: 6px;
+  margin-bottom: 18px;
+}
+
+.tweet-tag {
+  color: rgb(14, 167, 228);
+}
