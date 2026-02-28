@@ -1,0 +1,139 @@
+/* Ex. 7a */
+.cat-pic {
+  width: 200px;
+  border-radius: 10px;
+  margin-right: 30px;
+}
+
+/* Ex. 7b */
+.cat-pic2 {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  margin-right: 30px;
+}
+
+/* Ex. 7c */
+.cat-pic3 {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  object-fit: cover;
+  object-position: top;
+}
+
+/* Ex. 7d */
+
+* {
+  font-family: Arial;
+}
+
+.search-box {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  padding: 9px 12px;
+  border: 1px solid rgb(220, 220, 220);
+  border-radius: 7px;
+}
+
+.search-box:focus {
+  outline: none;
+}
+
+/* Ex. 7e */
+
+.google-search-box {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 440px;
+  font-size: 14px;
+  padding: 10px 14px;
+  border-radius: 20px;
+  box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.15);
+  border: none;
+}
+
+.google-search-box:focus {
+  outline: none;
+}
+
+/* Ex. 7f */
+
+.linkedin-signup-label {
+  color: rgb(101, 100, 100);
+  font-size: 11px;
+}
+
+.linkedin-signup-box {
+  width: 267px;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.linkedin-privacy-policy {
+  color: rgb(101, 100, 100);
+  font-size: 11px;
+}
+
+.linkedin-button {
+  margin-bottom: 20px;
+  background-color: rgb(43, 124, 228);
+  color: white;
+  border: none;
+  padding: 12px 97px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.linkedin-button:hover {
+  opacity: 0.8;
+}
+
+.linkedin-button:active {
+  opacity: 0.5;
+}
+
+/* Ex. 7g */
+
+.twitter-profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  object-fit: cover;
+  object-position: top;
+  vertical-align: middle;
+}
+
+.twitter-tweet-box {
+  font-size: 14px;
+  border: none;
+  vertical-align: middle;
+  margin-left: 2px;
+  margin-right: 80px;
+}
+
+.twitter-tweet-box:focus {
+  outline: none;
+}
+
+.tweet-button {
+  color: white;
+  background-color: rgb(29, 155, 240);
+  border: none;
+  border-radius: 20px;
+  padding: 5px 12px;
+  font-size: 13px;
+  font-weight: bold;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.tweet-button:hover {
+  opacity: 0.8;
+}
+
+.tweet-button:active {
+  opacity: 0.5;
+}

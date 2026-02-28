@@ -1,0 +1,21 @@
+* {
+  font-family: Montserrat;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.font-heading {
+  font-size: 40px;
+  font-weight: 600;
+  margin-left: 80px;
+  margin-bottom: 12px;
+  margin-top: 5px;
+}
+
+.font-text {
+  font-size: 18px;
+}
+
+.font-delivery {
+  text-decoration: underline;
+}

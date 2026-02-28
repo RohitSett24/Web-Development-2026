@@ -1,0 +1,12 @@
+.thumbnail-1 {
+  width: 300px;
+  height: 300px;
+  border: 2px solid red;
+  object-fit: contain;
+  object-position: center;
+}
+
+.search-box {
+  font-size: 20px;
+  margin-left: 20px;
+}
