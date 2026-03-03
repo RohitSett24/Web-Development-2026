@@ -1,0 +1,118 @@
+/* Ex. 11a */
+
+.grid-1 {
+  display: grid;
+  grid-template-columns: 200px 75px;
+}
+
+.grid-1-col-1 {
+  background-color: skyblue;
+}
+
+.grid-1-col-2 {
+  background-color: pink;
+}
+
+/* Ex. 11b */
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 50px 1fr 75px;
+}
+
+.grid-2-col-1, .grid-2-col-3 {
+  background-color: skyblue;
+}
+
+.grid-2-col-2 {
+  background-color: pink;
+}
+
+/* Ex. 11c */
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 10px;
+}
+
+.grid-3 div {
+  background-color: pink;
+}
+
+/* Ex. 11d */
+
+.animal-cards-grid {
+  display: grid;
+  grid-template-columns: 130px 130px 130px;
+  column-gap: 16px;
+}
+
+.animal-card {
+  font-family: Arial;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.25);
+}
+
+.animal-profile-pic {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.animal-card-content {
+  padding-left: 5px;
+}
+
+.animal-name {
+  font-weight: bold;
+  font-size: 13px;
+  margin-top: 2px;
+  margin-bottom: 0;
+}
+
+.mutual-friends-grid {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  column-gap: 5px;
+  align-items: center;
+  grid-template-rows: 30px;
+}
+
+.mutual-friend-profile-pic {
+  width: 100%;
+  height: 20px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 50px;
+}
+
+.animal-mutual-friends {
+  font-size: 11px;
+  color: grey;
+}
+
+.animal-add-friend-button-container {
+  margin-top: 2px;
+  margin-bottom: 7px;
+}
+
+.animal-add-friend-button {
+  background-color: rgb(25, 117, 215);
+  color: white;
+  border: none;
+  font-size: 11px;
+  padding: 5px 12px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.animal-add-friend-button:hover {
+  opacity: 0.8;
+}
+
+.animal-add-friend-button:active {
+  opacity: 0.5;
+}

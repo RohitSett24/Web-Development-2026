@@ -4,35 +4,25 @@ p {
   margin-bottom: 0;
 }
 
-.video-thumbnail {
-  width: 300px;
+.video-preview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 16px;    
+  row-gap: 42px; 
 }
 
-.video-preview {
-  display: inline-block;
-  width: 300px;
-  vertical-align: top;
-  margin-right: 10px;
+.video-thumbnail {
+  width: 100%;
 }
 
 .video-content-row {
   margin-top: 7px;
-}
-
-.channel-pic {
-  display: inline-block;
-  width: 36px;
-  vertical-align: top;
-}
-
-.video-info {
-  display: inline-block;
-  width: 250px;
-  margin-left: 7px;
+  display: grid;
+  grid-template-columns: 48px 1fr;
 }
 
 .creator-profile-pic {
-  width: 100%;
+  width: 36px;
   border-radius: 30px;
 }
 
