@@ -1,0 +1,197 @@
+/* Ex. 12a */
+.flexbox-1 {
+  display: flex;
+}
+
+.flexbox-1-box-1 {
+  background-color: skyblue;
+  width: 200px;
+}
+
+.flexbox-1-box-2 {
+  background-color: pink;
+  width: 75px;
+}
+
+/* Ex. 12b */
+.flexbox-2 {
+  display: flex;
+}
+
+.flexbox-2-box-1 {
+  background-color: skyblue;
+  width: 50px;
+}
+
+.flexbox-2-box-2 {
+  background-color: pink;
+  flex: 1;
+}
+
+.flexbox-2-box-3 {
+  background-color: skyblue;
+  width: 75px;
+}
+
+/* Ex. 12c */
+.flexbox-3 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flexbox-3 div {
+  background-color: pink;
+}
+
+/* Ex. 12d */
+
+.flexbox-4 {
+  display: flex;
+  height: 50px;
+  border: 1px solid grey;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flexbox-4 div {
+  background-color: pink;
+}
+
+/* Ex. 12e */
+.home-notifications-messages-flexbox {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 95px;
+  border: 1px solid rgb(180, 179, 179);
+  padding: 10px 15px;
+  font-family: Arial;
+  border-radius: 5px;
+  font-size: 17px;
+}
+
+.home-flexbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  align-items: center;
+}
+
+.home-alerts, .notifications-alerts, .messages-alerts {
+  background-color: rgb(50, 112, 246);
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.notifications-flexbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  align-items: center;
+}
+
+.messages-flexbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Ex. 12f */
+
+.header-flexbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(122, 80, 162); 
+  height: 50px;
+  font-family: Arial;
+}
+
+.header-para {
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  margin-left: 15px;
+}
+
+.search-box {
+  width: 500px;
+  border: none;
+  border-radius: 20px;
+  padding: 7px 18px;
+  margin: 0px 20px;
+}
+
+.download-button {
+  background-color: rgb(122, 80, 162);
+  border: 1px solid white; 
+  color: white;
+  margin-right: 10px;
+  padding: 7px 12px;
+}
+
+/* Ex. 12g */
+
+.animal-social-media-flexbox {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial;
+  width: 320px;
+  border: 1px solid rgb(190, 187, 187);
+  padding: 10px;
+  padding-bottom: 0;
+}
+
+.animal-flexbox{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 12px;
+  align-items: center;
+}
+
+.animal-profile-pic {
+  width: 45px;
+  height: 45px;
+  border-radius: 30px;
+  object-fit: cover;
+  object-position: top;
+  margin-right: 12px;
+}
+
+.animal-flexbox p {
+  margin: 0;
+  margin-top: 2px;
+}
+
+.animal-name {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.animal-tag {
+  color: rgb(171, 170, 170);
+  font-size: 15px;
+}
+
+.animal-popularity {
+  color: rgb(171, 170, 170);
+  font-size: 13px;
+}
+
+.follow-button {
+  color: white;
+  font-weight: bold;
+  background-color: rgb(53, 146, 246);
+  border: none;
+  margin-left: auto;
+  border-radius: 5px;
+  font-size: 15px;
+  padding: 7px 12px;
+}
