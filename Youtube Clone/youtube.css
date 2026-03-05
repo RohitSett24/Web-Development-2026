@@ -6,15 +6,24 @@ p {
 
 body {
   margin: 0;
+  padding-top: 85px;
+  padding-left: 94px;
+  padding-right: 24px;
 }
 
 /* Header */
 
 .header {
+  background-color: white;
   height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center; 
+  border-bottom: 1px solid rgb(220, 220, 220);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .left-section {
@@ -100,6 +109,18 @@ body {
   width: 33px;
   height: 33px;
   border-radius: 20px;
+}
+
+/* Sidebar */
+
+.sidebar {
+  background-color: white;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: 60px;
+  width: 72px;
+  border-right: 1px solid rgb(242, 242, 242);
 }
 
 /* Main Content */
