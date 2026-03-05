@@ -1,0 +1,207 @@
+/* Ex. 13a */
+
+.nested-flexbox-1 {
+  display: flex;
+  height: 50px;
+}
+
+.nested-flexbox-1-box-1 {
+  background-color: pink;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nested-flexbox-1-box-2 {
+  background-color: skyblue;
+  width: 200px;
+}
+
+.item1 {
+  background-color: black;
+  color: white;
+}
+
+/* Ex. 13b */ 
+
+.nested-flexbox-2 {
+  display: flex;
+  height: 50px;
+}
+
+.nested-flexbox-2-box-1 {
+  width: 100px;
+  background-color: pink;
+}
+
+.nested-flexbox-2-box-2 {
+  width: 200px;
+  background-color: skyblue;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+.element-1 p{
+  margin: 0;
+}
+
+.element-1-row-2, .element-2-row-2 {
+  color: white;
+  background-color: black;
+}
+
+.element-2-row-2 {
+  margin-top: 18px;
+  margin-bottom: 0;
+}
+
+/* Ex. 13c & 13d */ 
+
+.gmail-inbox {
+  font-family: Arial;
+  box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.2);
+  width: 312px;
+  height: 105px;
+  border-radius: 5px;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.gmail-inbox-heading {
+  font-size: 11px;
+  color: grey;
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.email {
+  display: flex;
+  align-items: center;
+}
+
+.email-sender-profile-pic {
+  width: 36px;
+  height: 36px;
+  border-radius: 20px;
+  object-fit: cover;
+  object-position: top;
+  margin-right: 10px;
+}
+
+.email-content p {
+  margin: 0;
+  margin-bottom: 3px;
+}
+
+.email-content-line1 {
+  display: flex;
+  justify-content: space-between;
+  width: 253px;
+}
+
+.email-sender-name {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.email-time {
+  font-size: 11px;
+  color: grey;
+}
+
+.email-content-line2 {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.email-content-line3 {
+  font-size: 12px;
+  color: grey;
+}
+
+/* Ex. 13e */
+.gmail-inbox-2 {
+  font-family: Arial;
+  box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.2);
+  width: 312px;
+  height: 235px;
+  border-radius: 5px;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.email-2 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+/* Ex. 13f & 13g */
+
+.tweet {
+  display: flex;
+  align-items: start;
+  font-family: Arial;
+}
+
+.twitter-profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  object-fit: cover;
+  object-position: top;
+  margin-right: 12px;
+}
+
+.tweet-content p {
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.twitter-profile-name {
+  font-weight: bold; 
+}
+
+.twitter-profile-id {
+  color: grey;
+} 
+
+.tweet-message {
+  width: 400px;
+  line-height: 21px;
+}
+
+.tweet-link {
+  display: flex;
+  font-family: Arial;
+  margin-top: 10px;
+  margin-left: 60px;
+}
+
+.grey-area {
+  width: 100px;
+  background-color: rgb(216, 215, 215);
+  border: 1px solid rgb(218, 218, 218); 
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.tweet-link-info {
+  border: 1px solid rgb(218, 218, 218);
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  margin-left: -1px;
+  padding-left: 12px;
+}
+
+.tweet-link-line1 {
+  color: grey;
+  margin-bottom: 6px;
+}
+
+.tweet-link-line2 {
+  width: 240px;
+  margin-top: 0;
+  line-height: 21px;
+}

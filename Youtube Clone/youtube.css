@@ -8,6 +8,8 @@ body {
   margin: 0;
 }
 
+/* Header */
+
 .header {
   height: 60px;
   display: flex;
@@ -99,6 +101,8 @@ body {
   height: 33px;
   border-radius: 20px;
 }
+
+/* Main Content */
 
 .video-preview-grid {
   display: grid;
