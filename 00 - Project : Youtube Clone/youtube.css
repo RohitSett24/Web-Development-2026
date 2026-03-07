@@ -7,8 +7,9 @@
 body {
   margin: 0;
   padding-top: 81px;
-  padding-left: 95px;
+  padding-left: 96px;
   padding-right: 24px;
+  background-color: rgb(250, 250, 250);
 }
 
 /* Header */
@@ -35,10 +36,12 @@ body {
   width: 24px;
   margin-left: 24px;
   margin-right: 24px;
+  cursor: pointer;
 }
 
 .youtube-logo {
   width: 90px;
+  cursor: pointer;
 }
 
 .middle-section {
@@ -67,23 +70,55 @@ body {
 }
 
 .search-icon {
-  width: 25px;
-  margin-top: 3px;
+  width: 24px;
 }
 
 .search-button {
-  padding: 0 18px;
+  padding: 0 19px;
   margin-right: 8px;
   border: 1px solid rgb(202, 202, 202);
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
   margin-left: -1px;
   background-color: rgb(248, 248, 248);
+  transition: background-color 0.15 s ease;
+}
+
+.search-button:hover {
+  background-color: rgb(240, 240, 240);
+}
+
+.search-button:active {
+  background-color: rgb(232, 232, 232);
+}
+
+.search-button, .voice-button, .upload-icon-div, .youtube-apps-icon-div, .notification-icon-div {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  transition: opacity 0.15s ease;
+}
+
+.search-button:hover .tool-tip, .voice-button:hover .tool-tip, .upload-icon-div:hover .tool-tip, .youtube-apps-icon-div:hover .tool-tip, .notification-icon-div:hover .tool-tip {
+  opacity: 1;
+}
+
+.tool-tip { 
+  position: absolute;
+  color: white;
+  background-color: rgba(98, 98, 98, 0.9);
+  padding: 7px 7px;
+  font-size: 12px;
+  border-radius: 2px;
+  bottom: -50px;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
 }
 
 .voice-icon {
   width: 24px;
-  margin-top: 3px;
 }
 
 .voice-button {
@@ -136,12 +171,11 @@ body {
   position: fixed;
   left: 0;
   bottom: 0;
-  top: 57px;
+  top: 56px;
   width: 72px;
-  border-right: 1px solid rgb(249, 249, 249);
-  display: flex;
-  flex-direction: column;
-  padding-top: 3px;
+  /* border-right: 1px solid rgb(249, 249, 249); */
+  padding-top: 4px;
+  z-index: 200;
 }
 
 .sidebar-icons {
@@ -160,7 +194,7 @@ body {
 
 .sidebar-icon-images {
   height: 24px;
-  margin-bottom: 7px;
+  margin-bottom: 6.5px;
 }
 
 .sidebar-icon-names {
@@ -213,6 +247,11 @@ body {
   font-size: 14px;
   line-height: 20px;
   margin-bottom: 10px;
+}
+
+.video-info a {
+  color: black;
+  text-decoration: none;
 }
 
 .video-creator, .video-stats {
