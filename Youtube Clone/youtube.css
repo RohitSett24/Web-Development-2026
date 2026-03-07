@@ -1,4 +1,4 @@
-p {
+* {
   font-family: Roboto;
   margin-top: 0;
   margin-bottom: 0;
@@ -6,8 +6,8 @@ p {
 
 body {
   margin: 0;
-  padding-top: 80px;
-  padding-left: 94px;
+  padding-top: 81px;
+  padding-left: 95px;
   padding-right: 24px;
 }
 
@@ -24,6 +24,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 100; 
 }
 
 .left-section {
@@ -50,9 +51,9 @@ body {
 
 .search-box {
   flex: 1;
-  padding: 8px 10px;
+  padding: 8px 12px;
   font-size: 16px;
-  border: 1px solid rgb(202, 202, 202);
+  border: 1px solid rgb(180, 180, 180);
   border-top-left-radius: 2px;
   border-bottom-left-radius: 2px;
   box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05); 
@@ -94,9 +95,10 @@ body {
 }
 
 .right-section {
-  width: 180px;
+  width: 182px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-right: 24px;
   flex-shrink: 0;
 }
@@ -105,9 +107,25 @@ body {
   width: 24px;
 }
 
+.notification-icon-div {
+  position: relative;
+  height: 24px;
+}
+
+.notification-number {
+  color: white;
+  background-color: rgb(203, 0, 0);
+  position: absolute;
+  font-size: 10px;
+  padding: 1.5px 5px;
+  border-radius: 50%;
+  top: -1px;
+  right: -5px;
+}
+
 .user-channel-pic {
-  width: 33px;
-  height: 33px;
+  width: 32px;
+  height: 32px;
   border-radius: 20px;
 }
 
@@ -118,7 +136,7 @@ body {
   position: fixed;
   left: 0;
   bottom: 0;
-  top: 56px;
+  top: 57px;
   width: 72px;
   border-right: 1px solid rgb(249, 249, 249);
   display: flex;
@@ -132,11 +150,17 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.sidebar-icons:hover {
+  background-color: rgb(230, 230, 230);
 }
 
 .sidebar-icon-images {
   height: 24px;
-  margin-bottom: 6px;
+  margin-bottom: 7px;
 }
 
 .sidebar-icon-names {
@@ -157,8 +181,24 @@ body {
   width: 100%;
 }
 
+.thumbnail-div {
+  position: relative;
+}
+
+.video-time {
+  position: absolute;
+  color: white;
+  background-color: black;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 4px;
+  border-radius: 2px;
+  bottom: 11px;
+  right: 4px;
+}
+
 .video-content-row {
-  margin-top: 7px;
+  margin-top: 8px;
   display: grid;
   grid-template-columns: 48px 1fr;
 }
