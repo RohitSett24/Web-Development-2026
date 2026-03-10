@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>Buttons</title>
+    <style>
+      .add-to-cart-button {
+        background-color: yellow;
+        cursor: pointer;
+      }
+
+      .add-to-cart-button:hover {
+        opacity: 0.8;
+      }
+
+      .add-to-cart-button:active {
+        opacity: 0.5;
+      }
+
+      .buy-now-button {
+        background-color: orange;
+        cursor: pointer;
+      }
+
+      .buy-now-button:hover {
+        opacity: 0.8;
+      }
+
+      .buy-now-button:active {
+        opacity: 0.5;
+      }
+
+    </style>
+  </head>
+  <body>
+    <button class = "click-button">
+      Click
+    </button>
+
+    <button class="name-button">
+      Rohit
+    </button>
+
+    <button class="food-button">
+      Chocolate
+    </button>
+
+    <p>
+      Hello, world!
+    </p>
+
+    <p>
+      I learnt how to use JS in html ;)
+    </p>
+
+    <button class="add-to-cart-button">
+      Add to cart
+    </button>
+
+    <button class="buy-now-button">
+      Buy now
+    </button>
+
+    <hr>
+
+    <p>
+      Adults Plain Cotton T-shirt
+    </p>
+
+    <p>
+      Price: $7.99
+    </p>
+
+    <button class="add-to-cart-button" onclick = "alert('Added');">
+      Add to cart
+    </button>
+
+    <button class="buy-now-button" onclick = "console.log('Loading...'); alert('Purchased');">
+      Buy now
+    </button>
+
+    <script>
+      console.log('Welcome!');
+    </script>
+  </body>
+</html>
