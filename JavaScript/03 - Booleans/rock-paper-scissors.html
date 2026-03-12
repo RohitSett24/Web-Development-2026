@@ -10,20 +10,90 @@
       Rock Paper Scissors
     </p>
 
-    <button>
+    <button onclick = "
+      myChoice = 'Rock';
+
+      randomNumber = Math.random();
+
+      if (randomNumber >= 0 && randomNumber < 1/3) {
+        compChoice = 'Rock';
+      } else if (randomNumber >= 1/3 && randomNumber < 2/3) {
+        compChoice = 'Paper';
+      } else if (randomNumber >= 2/3 && randomNumber < 1) {
+        compChoice = 'Scissors';
+      }
+
+      if (compChoice === myChoice) {
+        result = 'Tie.';
+      } else if (compChoice === 'Scissors') {
+        result = 'You win.';
+      } else {
+        result = 'You lose.';
+      }
+
+      alert(`You picked ${myChoice}. Computer picked ${compChoice}. ${result} `);
+    ">
       Rock
     </button>
 
-    <button>
+    <button onclick = "
+      myChoice = 'Paper';
+
+      randomNumber = Math.random();
+
+      if (randomNumber >= 0 && randomNumber < 1/3) {
+        compChoice = 'Rock';
+      } else if (randomNumber >= 1/3 && randomNumber < 2/3) {
+        compChoice = 'Paper';
+      } else if (randomNumber >= 2/3 && randomNumber < 1) {
+        compChoice = 'Scissors';
+      }
+
+      if (compChoice === myChoice) {
+        result = 'Tie.';
+      } else if (compChoice === 'Rock') {
+        result = 'You win.';
+      } else {
+        result = 'You lose.';
+      }
+
+      alert(`You picked ${myChoice}. Computer picked ${compChoice}. ${result}`);
+    ">
       Paper
     </button>
 
-    <button>
+    <button onclick = "
+      myChoice = 'Scissors';
+
+      randomNumber = Math.random();
+
+      if (randomNumber >= 0 && randomNumber < 1/3) {
+        compChoice = 'Rock';
+      } else if (randomNumber >= 1/3 && randomNumber < 2/3) {
+        compChoice = 'Paper';
+      } else if (randomNumber >= 2/3 && randomNumber < 1) {
+        compChoice = 'Scissors';
+      }
+
+      if (compChoice === myChoice) {
+        result = 'Tie.';
+      } else if (compChoice === 'Paper') {
+        result = 'You win.';
+      } else {
+        result = 'You lose.';
+      }
+
+      alert(`You picked ${myChoice}. Computer picked ${compChoice}. ${result}`);
+    ">
       Scissors
     </button>
 
-    <script>
 
+    <script>
+      let myChoice;
+      let compChoice;
+      let result;
+      let randomNumber;
     </script>
   </body>
 </html>

@@ -7,15 +7,27 @@
   </head>
   <body>
     <script>
-      const age = 12;
+      // Ex 1.
+      const hour = 6;
+      const name = 'Rohit';
 
-      if (age >= 18) {
-        console.log('Eligible to drive');
-      } else if (age >= 14) {
-        console.log('Bruh! Go to school');
+      if (hour >= 6 && hour <= 12) {
+        console.log(`Good morning ${name}!`);
+      } else if (hour >= 13 && hour <= 17) {
+        console.log(`Good afternoon ${name}!`);
       } else {
-        console.log('Not eligible to drive');
+        console.log(`Good night ${name}!`);
       }
-    </script>
+
+      // Ex 2.
+      const age = 68;
+      const isHoliday = false;
+
+      if ((age <= 6 || age >= 65) && !isHoliday) {
+        console.log('Discount');
+      } else {
+        console.log('No discount');
+      }
+    </script> 
   </body>
 </html>

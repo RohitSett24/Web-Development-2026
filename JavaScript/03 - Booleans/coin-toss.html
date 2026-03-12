@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin-flip</title>
+  </head>
+  <body>
+    <p>Coin Toss</p>
+
+    <button onclick = "
+      myChoice = 'Heads';
+
+      randomNumber = Math.random();
+
+      result = (randomNumber >= 0 && randomNumber < 0.5) ? 'Heads' : 'Tails';
+
+      (result === myChoice) ? alert('You win.') : alert ('You lose');
+    ">
+      Heads
+    </button>
+
+    <button onclick = "
+      myChoice = 'Tails';
+
+      randomNumber = Math.random();
+
+      result = (randomNumber >= 0 && randomNumber < 0.5) ? 'Heads' : 'Tails';
+
+      (result === myChoice) ? alert('You win.') : alert ('You lose');
+    ">
+      Tails
+    </button>
+
+    <script>
+      let myChoice;
+      let result;
+      let randomNumber;
+    </script>
+  </body>
+</html>
