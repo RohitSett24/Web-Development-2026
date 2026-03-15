@@ -9,33 +9,50 @@
     <p>Coin Toss</p>
 
     <button onclick = "
-      myChoice = 'Heads';
-
-      randomNumber = Math.random();
-
-      result = (randomNumber >= 0 && randomNumber < 0.5) ? 'Heads' : 'Tails';
-
-      (result === myChoice) ? alert('You win.') : alert ('You lose');
+      playGame('heads');
     ">
       Heads
     </button>
 
     <button onclick = "
-      myChoice = 'Tails';
-
-      randomNumber = Math.random();
-
-      result = (randomNumber >= 0 && randomNumber < 0.5) ? 'Heads' : 'Tails';
-
-      (result === myChoice) ? alert('You win.') : alert ('You lose');
+      playGame('tails');
     ">
       Tails
     </button>
 
+    <button onclick = "
+      score.wins = 0;
+      score.losses = 0;
+
+      localStorage.removeItem('score');
+    ">
+      Reset Score
+    </button>
+
     <script>
-      let myChoice;
-      let result;
-      let randomNumber;
+      const score = JSON.parse(localStorage.getItem('score'))
+      || {
+        wins: 0,
+        losses: 0
+      };
+
+      function playGame(myGuess) {
+        const randomNumber = Math.random();
+
+        const tossResult = (randomNumber >= 0 && randomNumber < 0.5) ? 'heads' : 'tails';
+        let result;
+
+        if(tossResult === myGuess) {
+          result = 'You win.';
+          score.wins += 1;
+        } else {
+          result = 'You lose.';
+          score.losses += 1;
+        }
+
+        localStorage.setItem('score', JSON.stringify(score));
+        alert(`Your guess is ${myGuess}. Toss Result is ${tossResult}. ${result}\nWins: ${score.wins}, Losses: ${score.losses}`);
+      }
     </script>
   </body>
 </html>

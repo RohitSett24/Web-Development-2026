@@ -100,8 +100,7 @@
       </button>
 
       <button onclick = "
-        calculation = eval(calculation);
-        console.log(calculation);
+        updateCalculation('=');
       ">
         =
       </button>
@@ -116,16 +115,31 @@
     <button onclick = "
       calculation = '';
       console.log('Cleared.');
+      localStorage.removeItem('calculation');
     ">
       Clear
     </button>
 
+    <button onclick = "
+      updateCalculation('X');
+    ">
+      X
+    </button>
+
     <script>
-      let calculation = '';
+      let calculation = localStorage.getItem('calculation') || '';
 
       function updateCalculation(symbol) {
-        calculation += symbol;
+        if(symbol === '=') {
+          calculation = eval(calculation);
+        } else if(symbol === 'X') {
+          calculation = calculation.slice(0, -1);
+        } else {
+          calculation += symbol;
+        }
+        
         console.log(calculation);
+        localStorage.setItem('calculation', calculation);
       }
     </script>
   </body>
