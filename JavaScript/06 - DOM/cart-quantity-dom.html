@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>Cart Quantity</title>
+  </head>
+  <body>
+    <p>
+      Cart Quantity
+    </p>
+
+    <button onclick = "
+      console.log(`Cart quantity: ${cartQuantity}`);
+    ">
+      Show Quantity
+    </button>
+
+    <button onclick = "
+      updateCartQuantity('add', 1);
+    ">
+      Add to Cart
+    </button> 
+
+    <button onclick = "
+      updateCartQuantity('add', 2);
+    ">
+      +2
+    </button>
+
+    <button onclick = "
+      updateCartQuantity('add', 3);
+    ">
+      +3
+    </button>
+
+    <button onclick = "
+      updateCartQuantity('add', 4);
+    ">
+      +4
+    </button>
+
+    <button onclick = "cartQuantity
+      updateCartQuantity('add', 5);
+    ">
+      +5
+    </button>
+
+    <button onclick = "
+      updateCartQuantity('remove', 1);
+    ">
+      Remove from cart
+    </button>
+
+    <button onclick = "
+      updateCartQuantity('remove', 2);
+    ">
+      -2
+    </button>
+
+    <button onclick = "
+      updateCartQuantity('remove', 3);
+    ">
+      -3
+    </button>
+
+    <button onclick = "
+      cartQuantity = 0;
+
+      localStorage.removeItem('cartQuantity');
+      displayCartQuantity();
+    ">
+      Reset Cart
+    </button>
+
+    <p class = "js-cart-quantity"></p>
+
+    <script>
+      let cartQuantity = Number(localStorage.getItem('cartQuantity')) || 0;
+
+      displayCartQuantity();
+
+      function displayCartQuantity() {
+        document.querySelector('.js-cart-quantity').innerHTML = `Cart quantity: ${cartQuantity}`;
+      }
+
+      function updateCartQuantity(updationType, noOfItems) {
+        console.log(cartQuantity);
+        
+        if(updationType === 'add') {
+          if (cartQuantity + noOfItems > 10) {
+            alert('You can add upto total of 10 items');
+            return;
+          }
+
+          cartQuantity += noOfItems; 
+        }
+        else if (updationType === 'remove') {
+          if (cartQuantity - noOfItems < 0) {
+            alert('Not enough items in the cart');
+            return;
+          }
+
+          cartQuantity -= noOfItems;
+        }
+
+        localStorage.setItem('cartQuantity', cartQuantity);
+
+        displayCartQuantity();
+      }
+    </script>
+  </body>
+</html>

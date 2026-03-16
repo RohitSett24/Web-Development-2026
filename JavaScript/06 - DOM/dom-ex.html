@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Exercises</title>
+  </head>
+  <body>
+    <!-- Ex. 9a-->
+    <button>9a</button>
+
+    <!-- Ex. 9b-->
+    <button class = "js-9b-btn">9b</button>
+    <br><br><br>
+
+    <!-- Ex. 9c-->
+    <button onclick = "
+      document.querySelector('.js-choice').innerHTML = 'You chose: heads';
+    ">heads</button>
+
+    <button onclick = "
+      document.querySelector('.js-choice').innerHTML = 'You chose: tails';
+    ">tails</button>
+
+    <p class = "js-choice"></p>
+
+    <br><br><br>
+
+    <!-- Ex. 9d - 9f -->
+    <input class = "js-input-elm" type = "text" 
+    placeholder = "Name" onkeydown = "
+      handleKey(event);
+    ">
+
+    <button onclick = "
+      displayName();
+    ">Submit</button>
+
+    <p class = "js-name"></p>
+
+    <br><br><br>
+
+    <!-- Ex. 9h-->
+
+    <input class = "js-inp-elm" type = "text" 
+    placeholder = "Type Something" oninput = "
+      displayText();
+    ">
+
+    <p class = "js-text"></p>
+
+    <br><br><br>
+
+    <script>
+      //Ex. 9a
+      console.log(document.querySelector('button'));
+
+      //Ex. 9b
+      document.querySelector('.js-9b-btn').innerHTML = '9b done!';
+
+      //Ex. 9d
+      function displayName() {
+        const name = document.querySelector('.js-input-elm').value;
+
+        document.querySelector('.js-name').innerHTML = `Your name is: ${name}`;
+      }
+
+      //Ex. 9e & 9f
+      function handleKey(event) {
+        if(event.key === 'Enter') {
+          displayName();
+        }
+      }
+
+      //Ex. 9h
+      function displayText() {
+        const inputElement = document.querySelector('.js-inp-elm');
+
+        document.querySelector('.js-text').innerHTML = inputElement.value;
+      }
+    </script>
+  </body>
+</html>

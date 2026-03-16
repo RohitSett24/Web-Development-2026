@@ -6,6 +6,7 @@
     <title>DOM Projects</title>
   </head>
   <body>
+    <!-- Proj. 1-->
     <p>YouTube Subscribe Button</p>
 
     <button onclick = "
@@ -13,6 +14,25 @@
     " class = "js-subscribe-button">
       Subscribe
     </button>
+    <br><br><br>
+
+    <!-- Proj. 3-->
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under $40 = +$10 shipping.</p>
+    <p>Orders over $40 = FREE shipping.</p>
+
+    <input class = "js-init-cost" type = "text" 
+    placeholder = "Cost of order" onkeydown = "
+      displayCostOnEnter(event);
+    ">
+    
+    <button class = "js-cal-btn" onclick = "
+      calculateFinalCost();
+    ">Calculate</button>
+    
+    <p class = "js-final-cost"></p>
+
+    <br><br><br>
 
     <script>
       function subscribe() {
@@ -22,6 +42,27 @@
           buttonElement.innerHTML = 'Subscribed';
         } else {
           buttonElement.innerHTML = 'Subscribe';
+        }
+      }
+
+      function calculateFinalCost() {
+        const inputElement = document.querySelector('.js-init-cost');
+        const initCost = Number(inputElement.value) * 100;
+
+        let finalCost;
+
+        if(initCost < 4000) {
+          finalCost = (initCost + 1000)/100;
+        } else {
+          finalCost = initCost/100;
+        }
+
+        document.querySelector('.js-final-cost').innerHTML = `$${finalCost}`;
+      }
+
+      function displayCostOnEnter(event) {
+        if(event.key === 'Enter') {
+          calculateFinalCost();
         }
       }
     </script>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+  </head>
+  <body>
+    <p>Calculator</p>
+
+    <p class = "js-result"></p>
+
+    <p>
+      <button onclick = "
+        updateCalculation(1);
+      ">
+        1
+      </button>
+
+      <button onclick = "
+        updateCalculation(2);
+      ">
+        2
+      </button>
+
+      <button onclick = "
+        updateCalculation(3);
+      ">
+        3
+      </button>
+
+      <button onclick = "
+        updateCalculation(' + ');
+      ">
+        +
+      </button>
+    </p>
+
+    <p>
+      <button onclick = "
+        updateCalculation(4);  
+      ">
+        4
+      </button>
+
+      <button onclick = "
+        updateCalculation(5); 
+      ">
+        5
+      </button>
+
+      <button onclick = "
+        updateCalculation(6);  
+      ">
+        6
+      </button>
+
+      <button onclick = "
+        updateCalculation(' - ');  
+      ">
+        -
+      </button>
+    </p>
+
+    <p>
+      <button onclick = "
+        updateCalculation(7); 
+      ">
+        7
+      </button>
+
+      <button onclick = "
+        updateCalculation(8); 
+      ">
+        8
+      </button>
+
+      <button onclick = "
+        updateCalculation(9); 
+      ">
+        9
+      </button>
+
+      <button onclick = "
+        updateCalculation(' * '); 
+      ">
+        *
+      </button>
+    </p>
+
+    <p>
+      <button onclick = "
+        updateCalculation(0);  
+      ">
+        0
+      </button>
+
+      <button onclick = "
+        updateCalculation('.');  
+      ">
+        .
+      </button>
+
+      <button onclick = "
+        updateCalculation('=');
+      ">
+        =
+      </button>
+
+      <button onclick = "
+        updateCalculation(' / '); 
+      ">
+        /
+      </button>
+    </p>
+
+    <button onclick = "
+      calculation = '';
+      document.querySelector('.js-result').innerHTML = calculation;
+      localStorage.removeItem('calculation');
+    ">
+      Clear
+    </button>
+
+    <button onclick = "
+      updateCalculation('X');
+    ">
+      X
+    </button>
+
+    <script>
+      let calculation = localStorage.getItem('calculation') || '';
+      document.querySelector('.js-result').innerHTML = calculation;
+
+      function updateCalculation(symbol) {
+        if(symbol === '=') {
+          calculation = eval(calculation);
+        } else if(symbol === 'X') {
+          calculation = calculation.slice(0, -1);
+        } else {
+          calculation += symbol;
+        }
+        
+        document.querySelector('.js-result').innerHTML = calculation;
+        localStorage.setItem('calculation', calculation);
+      }
+    </script>
+  </body>
+</html>
