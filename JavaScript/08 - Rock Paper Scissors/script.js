@@ -17,11 +17,11 @@ function pickComputerChoice() {
   let compChoice;
 
   if (randomNumber >= 0 && randomNumber < 1/3) {
-    compChoice = 'Rock';
+    compChoice = 'rock';
   } else if (randomNumber >= 1/3 && randomNumber < 2/3) {
-    compChoice = 'Paper';
+    compChoice = 'paper';
   } else if (randomNumber >= 2/3 && randomNumber < 1) {
-    compChoice = 'Scissors';
+    compChoice = 'scissors';
   }
 
   return compChoice;
