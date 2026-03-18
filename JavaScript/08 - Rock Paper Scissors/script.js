@@ -34,7 +34,7 @@ function playGame(myChoice) {
 
   if (compChoice === myChoice) {
     result = 'Tie.';
-  } else if ((myChoice === 'Rock' && compChoice === 'Scissors') || (myChoice === 'Paper' && compChoice === 'Rock') || (myChoice === 'Scissors' && compChoice === 'Paper')) {
+  } else if ((myChoice === 'rock' && compChoice === 'scissors') || (myChoice === 'paper' && compChoice === 'rock') || (myChoice === 'scissors' && compChoice === 'paper')) {
     result = 'You win.';
   } else {
     result = 'You lose.';
