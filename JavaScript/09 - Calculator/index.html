@@ -4,32 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <link rel = "stylesheet" href = "style.css">
   </head>
   <body>
-    <p>Calculator</p>
-
-    <p class = "js-result"></p>
+    <p class = "result js-result"></p>
 
     <p>
-      <button onclick = "
+      <button class = "number-btn" onclick = "
         updateCalculation(1);
       ">
         1
       </button>
 
-      <button onclick = "
+      <button class = "number-btn"  onclick = "
         updateCalculation(2);
       ">
         2
       </button>
 
-      <button onclick = "
+      <button class = "number-btn"  onclick = "
         updateCalculation(3);
       ">
         3
       </button>
 
-      <button onclick = "
+      <button class = "operator-btn" onclick = "
         updateCalculation(' + ');
       ">
         +
@@ -37,25 +36,25 @@
     </p>
 
     <p>
-      <button onclick = "
+      <button class = "number-btn"  onclick = "
         updateCalculation(4);  
       ">
         4
       </button>
 
-      <button onclick = "
+      <button class = "number-btn"  onclick = "
         updateCalculation(5); 
       ">
         5
       </button>
 
-      <button onclick = "
+      <button class = "number-btn"  onclick = "
         updateCalculation(6);  
       ">
         6
       </button>
 
-      <button onclick = "
+      <button class = "operator-btn"  onclick = "
         updateCalculation(' - ');  
       ">
         -
@@ -63,25 +62,25 @@
     </p>
 
     <p>
-      <button onclick = "
+      <button class = "number-btn"  onclick = "
         updateCalculation(7); 
       ">
         7
       </button>
 
-      <button onclick = "
+      <button class = "number-btn"  onclick = "
         updateCalculation(8); 
       ">
         8
       </button>
 
-      <button onclick = "
+      <button class = "number-btn"  onclick = "
         updateCalculation(9); 
       ">
         9
       </button>
 
-      <button onclick = "
+      <button class = "operator-btn"  onclick = "
         updateCalculation(' * '); 
       ">
         *
@@ -89,32 +88,32 @@
     </p>
 
     <p>
-      <button onclick = "
+      <button class = "number-btn"  onclick = "
         updateCalculation(0);  
       ">
         0
       </button>
 
-      <button onclick = "
+      <button class = "number-btn"  onclick = "
         updateCalculation('.');  
       ">
         .
       </button>
 
-      <button onclick = "
+      <button class = "number-btn"  onclick = "
         updateCalculation('=');
       ">
         =
       </button>
 
-      <button onclick = "
+      <button class = "operator-btn"  onclick = "
         updateCalculation(' / '); 
       ">
         /
       </button>
     </p>
 
-    <button onclick = "
+    <button class = "clear-btn number-btn"  onclick = "
       calculation = '';
       document.querySelector('.js-result').innerHTML = calculation;
       localStorage.removeItem('calculation');
@@ -122,28 +121,12 @@
       Clear
     </button>
 
-    <button onclick = "
+    <button class = "clear-btn number-btn"  onclick = "
       updateCalculation('X');
     ">
       X
     </button>
 
-    <script>
-      let calculation = localStorage.getItem('calculation') || '';
-      document.querySelector('.js-result').innerHTML = calculation;
-
-      function updateCalculation(symbol) {
-        if(symbol === '=') {
-          calculation = eval(calculation);
-        } else if(symbol === 'X') {
-          calculation = calculation.slice(0, -1);
-        } else {
-          calculation += symbol;
-        }
-        
-        document.querySelector('.js-result').innerHTML = calculation;
-        localStorage.setItem('calculation', calculation);
-      }
-    </script>
+    <script src = "script.js"></script>
   </body>
 </html>

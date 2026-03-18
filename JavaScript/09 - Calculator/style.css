@@ -1,0 +1,39 @@
+body {
+  background-color: black;
+  font-family: Arial;
+}
+
+.number-btn {
+  border: none;
+  background-color: rgb(51, 51, 51);
+  color: white;
+  height: 60px;
+  width: 60px;
+  border-radius: 30px;
+  font-size: 26px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.operator-btn {
+  border: none;
+  background-color: rgb(254, 160, 10);
+  color: white;
+  height: 60px;
+  width: 60px;
+  border-radius: 30px;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.clear-btn {
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.result {
+  color: white;
+  font-size: 45px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}

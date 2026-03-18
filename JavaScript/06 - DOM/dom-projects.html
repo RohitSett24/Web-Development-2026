@@ -38,6 +38,10 @@
         padding: 12px 15px;
         cursor: pointer;
       }
+
+      .error-msg {
+        color: red;
+      }
     </style>
   </head>
   <body>
@@ -66,6 +70,8 @@
     
     <p class = "js-final-cost"></p>
 
+    <p class = "error-msg js-error-msg"></p>
+
     <br><br><br>
 
     <script>
@@ -87,13 +93,20 @@
 
         let finalCost;
 
-        if(initCost < 4000) {
-          finalCost = (initCost + 1000)/100;
-        } else {
-          finalCost = initCost/100;
-        }
+        if(initCost >= 0) {
+          if(initCost < 4000) {
+            finalCost = (initCost + 1000)/100;
+          } else {
+            finalCost = initCost/100;
+          }
 
-        document.querySelector('.js-final-cost').innerHTML = `$${finalCost}`;
+          document.querySelector('.js-final-cost').innerHTML = `$${finalCost}`;
+          document.querySelector('.js-error-msg').innerHTML = ''; 
+        } else {
+          document.querySelector('.js-final-cost').innerHTML = ``;
+          document.querySelector('.js-error-msg').innerHTML = 'Error: cost cannot be less than $0'; 
+        }
+        
       }
 
       function displayCostOnEnter(event) {
