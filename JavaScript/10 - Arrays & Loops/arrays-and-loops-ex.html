@@ -163,6 +163,24 @@
 
       console.log(minMax([3]));
       console.log(minMax([]));
+
+      //Ex. 11n
+      function countWords(words) {
+        const uniqueWords = {};
+
+        for(let i = 0; i < words.length; i++) {
+          const word = words[i];
+          if(!uniqueWords[word]) {
+            uniqueWords[word] = 1;
+          } else {
+            uniqueWords[word] += 1;
+          }
+        }
+
+        return uniqueWords;
+      }
+
+      console.log(countWords(['apple', 'grape', 'apple', 'apple', 'grape', 'mango']));
     </script>
   </body>
 </html>
