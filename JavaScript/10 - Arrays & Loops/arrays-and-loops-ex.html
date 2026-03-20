@@ -181,6 +181,87 @@
       }
 
       console.log(countWords(['apple', 'grape', 'apple', 'apple', 'grape', 'mango']));
+
+      //Ex. 11o - 11q
+      function searchInArray(array, key) {
+        for(let i = 0; i < array.length; i++) {
+          if(array[i] === key) {
+            return i;
+          }
+        }
+        return -1;
+      }
+
+      console.log(searchInArray(['hello', 'world', 'search', 'good'],'search'));
+      console.log(searchInArray(['not', 'found'],'search'));
+      console.log(searchInArray(['not', 'found', 'hello', 'world', 'search'],'world'));
+
+      console.log(searchInArray(['hello', 'world', 'search', 'good', 'search', 'search'],'search'));
+
+      //Ex. 11r - 11u
+      function removeEgg(foods) {
+        const foodsWithoutEgg = [];
+        let countEggs = 0;
+        const foodsReversed = foods.slice().reverse();
+
+        for(let i = 0; i < foodsReversed.length; i++) {
+          if(foodsReversed[i] === 'egg') {
+            countEggs++;
+            if(countEggs <= 2) {
+              continue;
+            }
+          }
+          foodsWithoutEgg.push(foodsReversed[i]);
+        }
+
+        return foodsWithoutEgg.reverse();
+      }
+
+      const foods = ['egg','apple','egg','egg','ham']
+      console.log(removeEgg(foods));
+      console.log(foods);
+
+      //Ex. 11v
+      for(let i = 1; i <= 20; i++) {
+        if(i % 3 === 0 && i % 5 === 0) {
+          console.log('FizzBuzz');
+          continue;
+        }
+        if(i % 3 === 0) {
+          console.log('Fizz');
+          continue;
+        }
+        if(i % 5 == 0) {
+          console.log('Buzz');
+          continue;
+        }
+        console.log(i);
+      }
+
+      //Ex. 11w
+      function searchInArray(array, key) {
+        for(let i = 0; i < array.length; i++) {
+          if(array[i] === key) {
+            return i;
+          }
+        }
+        return -1;
+      }
+
+      function unique(array) {
+        const uniqueArray = [];
+
+        for(let i = 0; i < array.length; i++) {
+          if(searchInArray(uniqueArray, array[i]) === -1) {
+            uniqueArray.push(array[i]);
+          }
+        }
+
+        return uniqueArray;
+      }
+
+      console.log(unique(['green', 'red', 'blue', 'red']));
+      console.log(unique(['red', 'green', 'green', 'red']));
     </script>
   </body>
 </html>

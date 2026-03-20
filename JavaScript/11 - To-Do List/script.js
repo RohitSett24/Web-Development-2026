@@ -1,4 +1,6 @@
-const todoList = [];
+const todoList = JSON.parse(localStorage.getItem('todoList')) || [];
+
+displayTodoList();
 
 function addToArray() { 
   const inputElement = document.querySelector('.js-todo-input');
@@ -15,6 +17,8 @@ function addToArray() {
   inputElement.value = '';
   dateElement.value = '';
 
+  localStorage.setItem('todoList', JSON.stringify(todoList));
+
   displayTodoList();
 }
 
@@ -22,8 +26,7 @@ function displayTodoList() {
   let todoListHTML = ``;
   for(let i = 0; i < todoList.length; i++) {
     const todoObject = todoList[i];
-    const name = todoObject.name;
-    const dueDate = todoObject.dueDate;
+    const { name, dueDate } = todoObject;
 
     const html = `
       <div class = "todo-item">${name}</div> 
@@ -39,5 +42,6 @@ function displayTodoList() {
 
 function deleteFromList(index) {
   todoList.splice(index, 1);
+  localStorage.setItem('todoList', JSON.stringify(todoList));
   displayTodoList();
 }
