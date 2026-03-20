@@ -7,3 +7,5 @@ Youtube Clone Project: https://rohitsett24.github.io/Web-Development-2026/youtub
 Rock Paper Scissors Project: https://rohitsett24.github.io/Web-Development-2026/JavaScript/08%20-%20Rock%20Paper%20Scissors/
 
 Calculator Project: https://rohitsett24.github.io/Web-Development-2026/JavaScript/09%20-%20Calculator/
+
+To-Do List Project: https://rohitsett24.github.io/Web-Development-2026/JavaScript/11%20-%20To-Do%20List/
