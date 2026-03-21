@@ -24,18 +24,18 @@ function addToArray() {
 
 function displayTodoList() {
   let todoListHTML = ``;
-  for(let i = 0; i < todoList.length; i++) {
-    const todoObject = todoList[i];
+
+  todoList.forEach(function(todoObject, index) {
     const { name, dueDate } = todoObject;
 
     const html = `
       <div class = "todo-item">${name}</div> 
       <div class = "todo-date">${dueDate}</div>
-      <button class = "todo-delete-button" onclick = "deleteFromList(${i})">Delete</button>
+      <button class = "todo-delete-button" onclick = "deleteFromList(${index})">Delete</button>
     `;
     
     todoListHTML += html;
-  }
+  });
 
   document.querySelector('.js-todo-list').innerHTML = todoListHTML;
 }
