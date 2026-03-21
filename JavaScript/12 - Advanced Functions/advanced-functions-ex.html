@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App</title>
+  </head>
+  <body> 
+    <button class = "js-start-btn" onclick = "
+      changeAfterSomeTime()
+    ">Start</button>
+
+    <br><br><br>
+
+    <button onclick = "
+      addedToCart()
+    ">Add to Cart</button>
+
+    <p class = "js-added-msg"></p>
+
+    <br>
+
+    <button onclick = "updateNoOfMsgs('Add')">Add</button>
+    <button onclick = "updateNoOfMsgs('Remove')">Remove</button>
+    
+    <script>
+      // Ex. 12a
+      const add = function() {
+        console.log(2 + 3);
+      }
+
+      add();
+      add();
+      
+      // Ex. 12b
+      function runTwice(fun) {
+        fun();
+        fun();
+      }
+
+      runTwice(add);
+      runTwice(function() {
+        console.log('12b');
+      });
+      
+      //Ex. 12c & 12d
+      function changeAfterSomeTime() {
+        setTimeout(function() {
+          document.querySelector('.js-start-btn').innerHTML = 'Finished!';
+        }, 1000);
+        document.querySelector('.js-start-btn').innerHTML = 'Loading...';
+      }
+
+      let timeoutId;
+
+      //Ex. 12e & 12f
+      function addedToCart() {
+        clearTimeout(timeoutId);
+        document.querySelector('.js-added-msg').innerHTML = 'Added';
+        timeoutId = setTimeout(function() {
+          document.querySelector('.js-added-msg').innerHTML = '';
+        }, 2000);
+      }
+
+      //Ex. 12g - 12i
+      let noOfMsgs = 2;
+      let intervalId = null;
+
+      checkMsgsGtZero();
+
+      function updateNoOfMsgs(update) {
+        if(update === 'Add') {
+          noOfMsgs += 1;
+        } else if (update === 'Remove') {
+          if(noOfMsgs != 0) {
+            noOfMsgs -= 1;
+          }
+        }
+
+        checkMsgsGtZero();
+      }
+
+      function checkMsgsGtZero() {
+        if(noOfMsgs === 0) {
+          clearInterval(intervalId);
+          intervalId = null;
+          document.title = 'App';
+        } else {
+          if(intervalId === null) {
+            changeTitle();
+          }        
+        }
+      }
+
+      function changeTitle() {
+        let toggle = false;
+        intervalId = setInterval(function() {
+          if(toggle) {
+            document.title = 'App';
+          } else {
+            document.title = `(${noOfMsgs}) New messages`;
+          }
+          toggle = !toggle;
+        }, 1000);
+      }
+    </script>
+  </body>
+</html>

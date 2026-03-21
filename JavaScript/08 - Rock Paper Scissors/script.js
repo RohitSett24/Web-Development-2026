@@ -56,3 +56,21 @@ function playGame(myChoice) {
 
   updateScoreElement();
 }
+
+let isAutoPlaying = false;
+let intervalId;
+
+function autoPlay() {
+  if(!isAutoPlaying) {
+    intervalId = setInterval(function() {
+      const myChoice = pickComputerChoice();
+      playGame(myChoice);
+    }, 1000);
+    isAutoPlaying = true;
+    document.querySelector('.js-auto-play-btn').innerHTML = 'Stop Play';
+  } else {
+    clearInterval(intervalId);
+    isAutoPlaying = false;
+    document.querySelector('.js-auto-play-btn').innerHTML = 'Auto Play';
+  }
+}
