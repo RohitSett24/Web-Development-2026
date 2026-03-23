@@ -6,22 +6,18 @@
     <title>App</title>
   </head>
   <body> 
-    <button class = "js-start-btn" onclick = "
-      changeAfterSomeTime()
-    ">Start</button>
+    <button class = "js-start-btn">Start</button>
 
     <br><br><br>
 
-    <button onclick = "
-      addedToCart()
-    ">Add to Cart</button>
+    <button class = "js-add-to-cart-btn">Add to Cart</button>
 
     <p class = "js-added-msg"></p>
 
     <br>
 
-    <button onclick = "updateNoOfMsgs('Add')">Add</button>
-    <button onclick = "updateNoOfMsgs('Remove')">Remove</button>
+    <button class = "js-add-btn">Add</button>
+    <button class = "js-remove-btn">Remove</button>
     
     <script>
       // Ex. 12a
@@ -45,40 +41,34 @@
       
       //Ex. 12c & 12d
       function changeAfterSomeTime() {
-        setTimeout(function() {
+        setTimeout(() => {
           document.querySelector('.js-start-btn').innerHTML = 'Finished!';
         }, 1000);
         document.querySelector('.js-start-btn').innerHTML = 'Loading...';
       }
 
-      let timeoutId;
+      document.querySelector('.js-start-btn')
+        .addEventListener('click', changeAfterSomeTime);
 
       //Ex. 12e & 12f
+      let timeoutId;
+
       function addedToCart() {
         clearTimeout(timeoutId);
         document.querySelector('.js-added-msg').innerHTML = 'Added';
-        timeoutId = setTimeout(function() {
+        timeoutId = setTimeout(() => {
           document.querySelector('.js-added-msg').innerHTML = '';
         }, 2000);
       }
+
+      document.querySelector('.js-add-to-cart-btn')
+        .addEventListener('click', addedToCart);
 
       //Ex. 12g - 12i
       let noOfMsgs = 2;
       let intervalId = null;
 
       checkMsgsGtZero();
-
-      function updateNoOfMsgs(update) {
-        if(update === 'Add') {
-          noOfMsgs += 1;
-        } else if (update === 'Remove') {
-          if(noOfMsgs != 0) {
-            noOfMsgs -= 1;
-          }
-        }
-
-        checkMsgsGtZero();
-      }
 
       function checkMsgsGtZero() {
         if(noOfMsgs === 0) {
@@ -94,7 +84,7 @@
 
       function changeTitle() {
         let toggle = false;
-        intervalId = setInterval(function() {
+        intervalId = setInterval(() => {
           if(toggle) {
             document.title = 'App';
           } else {
@@ -103,6 +93,89 @@
           toggle = !toggle;
         }, 1000);
       }
+
+      function updateNoOfMsgs(update) {
+        if(update === 'Add') {
+          noOfMsgs += 1;
+        } else if (update === 'Remove') {
+          if(noOfMsgs != 0) {
+            noOfMsgs -= 1;
+          }
+        }
+
+        checkMsgsGtZero();
+      }
+
+      document.querySelector('.js-add-btn')
+        .addEventListener('click', () => {
+          updateNoOfMsgs('Add');
+        });
+
+      document.querySelector('.js-remove-btn')
+        .addEventListener('click', () => {
+          updateNoOfMsgs('Remove');
+        });
+
+      //Ex. 12j & 12k
+      const multiply = (num1, num2) => num1 * num2;
+      
+      console.log(multiply(5, 6));
+      console.log(multiply(2, 3));
+      console.log(multiply(7, 10));
+
+      //Ex. 12l
+      function countPositive(nums) {
+        let count = 0;
+
+        nums.forEach(value => {
+          if(value > 0) {
+            count++;
+          }
+        });
+
+        return count;
+      }
+
+      console.log(countPositive([1, -3, 5]));
+      console.log(countPositive([-2, 3, -5, 7, 10]));
+      
+      //Ex. 12m
+      function addNum(array, num) {
+        return array.map(value => value + num);
+      }
+
+      console.log(addNum([1, 2, 3], 2));
+      console.log(addNum([-2, -1, 0, 99], 2));
+
+      //Ex. 12n
+      function removeEgg(foods) {
+        return foods.filter(value => value !== 'egg');
+      }
+
+      console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']));
+
+      //Ex. 12o
+      function removeF2Egg(foods) {
+        let count = 0;
+
+        return foods.filter(value => {
+          if(value === 'egg') {
+            count++;
+            if(count <= 2) {
+              return false;
+            }
+            else {
+              return true;
+            }
+          } else {
+            return true;
+          }
+        });
+      }
+
+      console.log(removeF2Egg(['egg', 'apple', 'egg', 'egg', 'ham']));
+
+      //
     </script>
   </body>
 </html>

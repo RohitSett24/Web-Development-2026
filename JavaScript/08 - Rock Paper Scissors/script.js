@@ -75,6 +75,32 @@ function autoPlay() {
   }
 } 
 
+function resetScore() {
+  score.wins = 0;
+  score.losses = 0;
+  score.ties = 0;
+
+  localStorage.removeItem('score');
+
+  updateScoreElement();
+}
+
+function confirmResetScore() {
+  const divElement = document.querySelector('.js-reset-confirm');
+  divElement.innerHTML = 'Are you sure you want to reset the score? <button class = "yes-reset-btn js-yes-reset-btn">Yes</button> <button class = "no-reset-btn js-no-reset-btn">No</button>';
+
+  document.querySelector('.js-yes-reset-btn')
+    .addEventListener('click', () => {
+      resetScore();
+      divElement.innerHTML = '';
+    });
+
+    document.querySelector('.js-no-reset-btn')
+    .addEventListener('click', () => {
+      divElement.innerHTML = '';
+    });
+}
+
 document.querySelector('.js-rock-btn')
   .addEventListener('click', () => {
     playGame('rock');
@@ -95,13 +121,7 @@ document.querySelector('.js-auto-play-btn')
 
 document.querySelector('.js-reset-score-btn')
   .addEventListener('click', () => {
-    score.wins = 0;
-    score.losses = 0;
-    score.ties = 0;
-
-    localStorage.removeItem('score');
-
-    updateScoreElement();
+    confirmResetScore();
   });
 
 document.body
@@ -112,5 +132,9 @@ document.body
       playGame('paper');
     } else if(event.key === 's') {
       playGame('scissors');
+    } else if(event.key === 'a') {
+      autoPlay();
+    } else if(event.key === 'Backspace') {
+      confirmResetScore();
     }
   });
